@@ -1,6 +1,6 @@
 ## Installation
 
-   npm install --save akamai-beacon-parser  
+    npm install --save akamai-beacon-parser  
 
 ## Usage
 
