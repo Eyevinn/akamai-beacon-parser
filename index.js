@@ -24,7 +24,13 @@ AkamaiBeaconParser.prototype.parse = function(string) {
 }
 
 AkamaiBeaconParser.prototype.customdata = this.customdata;
-
 AkamaiBeaconParser.prototype.payload = this.payload;
+
+AkamaiBeaconParser.prototype.streamName = this.payload.aw;
+AkamaiBeaconParser.prototype.deliveryType = this.payload.ax;
+AkamaiBeaconParser.prototype.playerReferrer = this.payload.ag;
+AkamaiBeaconParser.prototype.title = this.payload.tt;
+AkamaiBeaconParser.prototype.category = this.payload.cg;
+AkamaiBeaconParser.prototype.playerType = this.payload.pd;
 
 module.exports = AkamaiBeaconParser;
