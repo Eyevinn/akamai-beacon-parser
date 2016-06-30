@@ -28,9 +28,9 @@ AkamaiBeaconParser.prototype.payload = this.payload;
 
 AkamaiBeaconParser.prototype.streamName = function() { return this.payload.aw; };
 AkamaiBeaconParser.prototype.deliveryType = function() { return this.payload.ax; };
-AkamaiBeaconParser.prototype.playerReferrer = function() { this.payload.ag; };
-AkamaiBeaconParser.prototype.title = function() { this.payload.tt; };
-AkamaiBeaconParser.prototype.category = function() { this.payload.cg; };
-AkamaiBeaconParser.prototype.playerType = function() { this.payload.pd; };
+AkamaiBeaconParser.prototype.playerReferrer = function() { return this.payload.ag; };
+AkamaiBeaconParser.prototype.title = function() { return this.payload.tt; };
+AkamaiBeaconParser.prototype.category = function() { return this.payload.cg; };
+AkamaiBeaconParser.prototype.playerType = function() { return this.payload.pd; };
 
 module.exports = AkamaiBeaconParser;
