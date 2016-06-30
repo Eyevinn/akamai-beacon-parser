@@ -26,11 +26,11 @@ AkamaiBeaconParser.prototype.parse = function(string) {
 AkamaiBeaconParser.prototype.customdata = this.customdata;
 AkamaiBeaconParser.prototype.payload = this.payload;
 
-AkamaiBeaconParser.prototype.streamName = this.payload.aw;
-AkamaiBeaconParser.prototype.deliveryType = this.payload.ax;
-AkamaiBeaconParser.prototype.playerReferrer = this.payload.ag;
-AkamaiBeaconParser.prototype.title = this.payload.tt;
-AkamaiBeaconParser.prototype.category = this.payload.cg;
-AkamaiBeaconParser.prototype.playerType = this.payload.pd;
+AkamaiBeaconParser.prototype.streamName = function() { return this.payload.aw; };
+AkamaiBeaconParser.prototype.deliveryType = function() { return this.payload.ax; };
+AkamaiBeaconParser.prototype.playerReferrer = function() { this.payload.ag; };
+AkamaiBeaconParser.prototype.title = function() { this.payload.tt; };
+AkamaiBeaconParser.prototype.category = function() { this.payload.cg; };
+AkamaiBeaconParser.prototype.playerType = function() { this.payload.pd; };
 
 module.exports = AkamaiBeaconParser;
