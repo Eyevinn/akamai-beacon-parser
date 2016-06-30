@@ -4,8 +4,18 @@
   "description": "A simple library to parse Akamai Beacon URIs",
   "main": "index.js",
   "scripts": {
+    "build": "browserify . -s akamai-beacon-parser -o dist/akamai-beacon-parser.js && uglifyjs dist/akamai-beacon-parser.js --comments --mangle --compress -o dist/akamai-beacon-parser.min.js",
+    "clean": "rm -rf dist && mkdir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Eyevinn/akamai-beacon-parser.git"
+  },
   "author": "Jonas Birmé (Eyevinn Technology) <jonas.birme@eyevinn.se>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "uglifyjs": "^2.4.10"
+  }
 }
